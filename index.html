@@ -305,5 +305,17 @@
       applyScale();
     }
   </script>
+  <!-- Register Offline Cache Engine -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js')
+          .then(reg => console.log('Offline cache ready:', reg.scope))
+          .catch(err => console.log('ServiceWorker error:', err));
+      });
+    }
+  </script>
+</body>
+</html>
 </body>
 </html>

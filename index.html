@@ -23,22 +23,30 @@
   
   <style>
     html { scroll-behavior: smooth; }
+
+    /* Dynamic Page Scaler Engine */
     :root { --page-scale: 1; }
+
     .scalable-content { zoom: var(--page-scale); }
+
+    /* Fallback scaling for WebKit browsers */
     @supports not (zoom: 1) {
       .scalable-content {
         transform: scale(var(--page-scale));
         transform-origin: top center;
       }
     }
+
     .hide-scrollbar::-webkit-scrollbar { display: none; }
     .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
   </style>
 </head>
 <body class="bg-slate-100 text-slate-800 font-sans pb-12">
 
-  <!-- Header Section -->
+  <!-- Header Section (Fixed at top, controls remain unscaled for easy tapping) -->
   <header class="bg-school-navy text-white py-4 px-4 shadow-lg sticky top-0 z-50">
+    
+    <!-- Scaler Control Bar -->
     <div class="max-w-6xl mx-auto flex justify-between items-center mb-2 px-2">
       <div class="text-xs font-bold text-slate-300">
         AD & FD POHL LEUNG SING TAK COLLEGE
@@ -47,13 +55,19 @@
       <!-- Font Size Adjuster Buttons -->
       <div class="inline-flex items-center bg-white/10 backdrop-blur-md rounded-lg p-1 border border-white/20 text-xs font-bold gap-1 shadow-inner">
         <span class="px-2 text-slate-200">字型大小:</span>
-        <button onclick="changeScale(-0.1)" class="bg-school-red hover:bg-red-700 text-white w-8 h-8 rounded-md flex items-center justify-center font-black text-sm transition-all active:scale-90 shadow-sm" title="縮小字型">－</button>
-        <button onclick="resetScale()" class="bg-white/20 hover:bg-white/30 text-white px-3 h-8 rounded-md flex items-center justify-center transition-all text-xs font-bold active:scale-90" id="scale-label" title="重置字型">100%</button>
-        <button onclick="changeScale(0.1)" class="bg-school-red hover:bg-red-700 text-white w-8 h-8 rounded-md flex items-center justify-center font-black text-sm transition-all active:scale-90 shadow-sm" title="放大字型">＋</button>
+        <button onclick="changeScale(-0.1)" class="bg-school-red hover:bg-red-700 text-white w-8 h-8 rounded-md flex items-center justify-center font-black text-sm transition-all active:scale-90 shadow-sm" title="縮小字型">
+          －
+        </button>
+        <button onclick="resetScale()" class="bg-white/20 hover:bg-white/30 text-white px-3 h-8 rounded-md flex items-center justify-center transition-all text-xs font-bold active:scale-90" id="scale-label" title="重置字型">
+          100%
+        </button>
+        <button onclick="changeScale(0.1)" class="bg-school-red hover:bg-red-700 text-white w-8 h-8 rounded-md flex items-center justify-center font-black text-sm transition-all active:scale-90 shadow-sm" title="放大字型">
+          ＋
+        </button>
       </div>
     </div>
 
-    <!-- Banner -->
+    <!-- Main Header Banner (Scalable) -->
     <div class="scalable-content text-center">
       <img id="school-badge-img" src="logo.png" alt="School Logo" style="width: 100px; height: auto; display: block; margin: 0 auto 8px auto;" onerror="this.style.display='none'">
       
@@ -69,6 +83,7 @@
         </div>
       </div>
 
+      <!-- Quick Navigation Pills -->
       <nav class="flex justify-center gap-2 overflow-x-auto hide-scrollbar px-2 pt-1 text-xs font-bold">
         <a href="#transition" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">升中適應</a>
         <a href="#academic" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">學業成果</a>
@@ -79,10 +94,10 @@
     </div>
   </header>
 
-  <!-- Main Content -->
+  <!-- Main Content Container (Scalable Body) -->
   <main class="scalable-content max-w-6xl mx-auto px-4 pt-6 space-y-10">
 
-    <!-- Domain 1: 升中適應 -->
+    <!-- Domain 1: 升中適應・同行成長 -->
     <section id="transition" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-2xl bg-red-100 text-school-red flex items-center justify-center text-xl font-bold">🌱</div>
@@ -95,27 +110,28 @@
         我們重視初中學生的適應與心理建構，透過高繩歷奇、露營體驗及中一學長同行計劃，協助新生迅速建立歸屬感，融入梁中大家庭。
       </p>
 
+      <!-- Photo Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="caring1.jpg" alt="高繩歷奇" class="w-full h-full object-cover">
+          <img src="transition1.jpeg" alt="高繩歷奇" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">高繩歷奇挑戰</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="caring2.jpg" alt="營地建立" class="w-full h-full object-cover">
+          <img src="transition2.jpeg" alt="營地建立" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">團隊露營體驗</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="caring3.jpg" alt="生日會慶祝" class="w-full h-full object-cover">
+          <img src="transition3.jpeg" alt="生日會慶祝" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">班級生日會</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="caring4.jpg" alt="師生晨跑" class="w-full h-full object-cover">
+          <img src="transition4.jpeg" alt="師生晨跑" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">師生晨跑健體</span>
         </div>
       </div>
     </section>
 
-    <!-- Domain 2: 學業成果 -->
+    <!-- Domain 2: 學業成果・升學出路 -->
     <section id="academic" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-2xl bg-blue-100 text-school-navy flex items-center justify-center text-xl font-bold">🎓</div>
@@ -125,6 +141,7 @@
         </div>
       </div>
 
+      <!-- Quick Stats Counter Banner -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 text-center">
           <div class="text-2xl font-black text-school-red">95.2%</div>
@@ -144,23 +161,24 @@
         </div>
       </div>
 
+      <!-- Photo Grid -->
       <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="academic1.jpg" alt="香港大學獎學金" class="w-full h-full object-cover">
+          <img src="academic1.jpg" alt="香港大學獎學金" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">香港大學 Entrance Scholarship</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="academic2.jpg" alt="科大工程學院頒獎" class="w-full h-full object-cover">
+          <img src="academic2.jpg" alt="科大工程學院頒獎" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">香港科技大學工程學院獎學金</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="academic3.jpg" alt="放榜互動" class="w-full h-full object-cover">
+          <img src="academic3.jpg" alt="放榜互動" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">DSE 亮麗成績分享</span>
         </div>
       </div>
     </section>
 
-    <!-- Domain 3: 英語學習 -->
+    <!-- Domain 3: 英語學習 & 走出課室 -->
     <section id="english" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold">✈️</div>
@@ -169,51 +187,44 @@
           <p class="text-xs text-slate-500">English Café | AI 說寫訓練 | 英國牛津遊學 | 日本/敦煌文化考察</p>
         </div>
       </div>
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+        營造豐富語境，結合初中數理英語授課與海外交流計劃（英國牛津、日本藝術祭、敦煌沙漠研學），讓學生在真實語境中學以致用。
+      </p>
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="global1.jpg" alt="牛津遊學" class="w-full h-full object-cover">
+          <img src="global1.JPG" alt="牛津遊學" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">英國牛津大學沉浸學習</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="global2.jpg" alt="萬聖節嘉年華" class="w-full h-full object-cover">
+          <img src="global2.jpg" alt="萬聖節嘉年華" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">萬聖節英語嘉年華</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="global3.jpg" alt="日本藝術祭" class="w-full h-full object-cover">
+          <img src="global3.JPG" alt="日本藝術祭" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">日本瀨戶內海藝術考察</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="global4.jpg" alt="敦煌沙漠研學" class="w-full h-full object-cover">
+          <img src="global4.jpeg" alt="敦煌沙漠研學" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">敦煌沙漠主題研學</span>
         </div>
       </div>
     </section>
 
-  </main>
+    <!-- Domain 4: 關愛校園・實踐價值 -->
+    <section id="caring" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold">🐾</div>
+        <div>
+          <h2 class="text-xl font-black text-school-navy">關愛校園 ‧ 實踐價值</h2>
+          <p class="text-xs text-slate-500">班級經營 | 貓島生命教育 | 長者學苑 | 社區義工服務</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+        落實人性化全人關愛，校內設有「貓島」與寵物美容課程推行生命教育，並創辦「長者學苑」促進跨代共融與義工精神。
+      </p>
 
-  <!-- Scaler Logic -->
-  <script>
-    let currentScale = 1.0;
-    const minScale = 0.8;
-    const maxScale = 1.5;
-
-    function applyScale() {
-      document.documentElement.style.setProperty('--page-scale', currentScale);
-      const percentage = Math.round(currentScale * 100);
-      document.getElementById('scale-label').textContent = percentage + '%';
-    }
-
-    function changeScale(delta) {
-      currentScale = Math.min(Math.max(currentScale + delta, minScale), maxScale);
-      currentScale = Math.round(currentScale * 10) / 10;
-      applyScale();
-    }
-
-    function resetScale() {
-      currentScale = 1.0;
-      applyScale();
-    }
-  </script>
-</body>
-</html>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="caring1.jpg" alt="貓島與寵物護理" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text

@@ -22,14 +22,20 @@
   </script>
   
   <style>
-    html { scroll-behavior: smooth; }
+    html { 
+      scroll-behavior: smooth; 
+    }
 
     /* Dynamic Page Scaler Engine */
-    :root { --page-scale: 1; }
+    :root {
+      --page-scale: 1;
+    }
 
-    .scalable-content { zoom: var(--page-scale); }
+    .scalable-content {
+      zoom: var(--page-scale);
+    }
 
-    /* Fallback scaling for WebKit browsers */
+    /* Fallback scaling for WebKit browsers supporting transform */
     @supports not (zoom: 1) {
       .scalable-content {
         transform: scale(var(--page-scale));
@@ -69,7 +75,7 @@
 
     <!-- Main Header Banner (Scalable) -->
     <div class="scalable-content text-center">
-      <img id="school-badge-img" src="logo.png" alt="School Logo" style="width: 100px; height: auto; display: block; margin: 0 auto 8px auto;" onerror="this.style.display='none'">
+      <img id="school-badge-img" src="logo.jpeg" alt="School Logo" style="width: 100px; height: auto; display: block; margin: 0 auto 8px auto;" onerror="this.style.display='none'">
       
       <h1 class="text-xl sm:text-2xl font-black tracking-tight leading-snug mb-1 text-center">
         博愛醫院歷屆總理聯誼會梁省德中學
@@ -164,15 +170,15 @@
       <!-- Photo Grid -->
       <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="academic1.jpg" alt="香港大學獎學金" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="academic1.JPEG" alt="香港大學獎學金" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">香港大學 Entrance Scholarship</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="academic2.jpg" alt="科大工程學院頒獎" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="academic2.JPEG" alt="科大工程學院頒獎" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">香港科技大學工程學院獎學金</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="academic3.jpg" alt="放榜互動" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="academic3.JPEG" alt="放榜互動" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">DSE 亮麗成績分享</span>
         </div>
       </div>
@@ -193,19 +199,19 @@
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="global1.JPG" alt="牛津遊學" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="global1.jpeg" alt="牛津遊學" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">英國牛津大學沉浸學習</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="global2.jpg" alt="萬聖節嘉年華" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="global2.jpeg" alt="萬聖節嘉年華" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">萬聖節英語嘉年華</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="global3.JPG" alt="日本藝術祭" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="global3.jpeg" alt="日本藝術祭" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">日本瀨戶內海藝術考察</span>
         </div>
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="global4.jpeg" alt="敦煌沙漠研學" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <img src="transition5.jpeg" alt="敦煌沙漠研學" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
           <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">敦煌沙漠主題研學</span>
         </div>
       </div>
@@ -226,5 +232,78 @@
 
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
-          <img src="caring1.jpg" alt="貓島與寵物護理" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
-          <span class="absolute bottom-2 left-2 bg-black/60 text-white text
+          <img src="caring1.jpeg" alt="貓島與寵物護理" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">貓島 ‧ 生命教育</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="caring2.jpeg" alt="長者學苑" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">長者學苑與長幼共融</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="caring3.jpeg" alt="社區送暖" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">社區探訪義工服務</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="caring4.jpeg" alt="校園民歌與樂團" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">露天空中舞台音樂會</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Domain 5: 多元學習・探索潛能 -->
+    <section id="steam" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl font-bold">🤖</div>
+        <div>
+          <h2 class="text-xl font-black text-school-navy">多元學習 ‧ 探索潛能</h2>
+          <p class="text-xs text-slate-500">週五多元學習課節 | STEAM探究 | 體藝發展 | 四大制服團隊</p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="steam1.jpeg" alt="STEAM編程" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">STEAM 機器人組裝</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="steam2.jpeg" alt="中樂團表演" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">中樂團與體藝培養</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="steam3.jpeg" alt="田徑代表隊" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">陸運會與田徑代表隊</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="steam4.jpeg" alt="制服團隊步操" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">童軍與紅十字會檢閱</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Scaler Logic Script -->
+  <script>
+    let currentScale = 1.0;
+    const minScale = 0.8;
+    const maxScale = 1.5;
+
+    function applyScale() {
+      document.documentElement.style.setProperty('--page-scale', currentScale);
+      const percentage = Math.round(currentScale * 100);
+      document.getElementById('scale-label').textContent = percentage + '%';
+    }
+
+    function changeScale(delta) {
+      currentScale = Math.min(Math.max(currentScale + delta, minScale), maxScale);
+      currentScale = Math.round(currentScale * 10) / 10;
+      applyScale();
+    }
+
+    function resetScale() {
+      currentScale = 1.0;
+      applyScale();
+    }
+  </script>
+</body>
+</html>

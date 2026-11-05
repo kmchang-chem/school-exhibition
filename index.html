@@ -441,6 +441,50 @@
       </div>
     </section>
 
+<!-- Point 7: Primary Students Information Day 小學學生資訊日 -->
+    <section id="infoday" class="bg-gradient-to-br from-school-navy to-slate-900 text-white rounded-3xl p-6 shadow-xl border border-amber-400/30">
+      <div class="flex items-center gap-3 mb-6">
+        <div class="w-10 h-10 rounded-2xl bg-school-gold text-school-navy flex items-center justify-center text-xl font-bold shadow-md">📢</div>
+        <div>
+          <h2 class="text-xl font-black text-school-gold">小學學生資訊日</h2>
+          <p class="text-xs text-slate-300">Primary Students Information Day</p>
+        </div>
+      </div>
+
+      <!-- Schedule Banner -->
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-6">
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center">
+          <div class="text-xs font-bold text-slate-300 mb-1">📅 活動日期</div>
+          <div class="text-lg font-black text-white">22/11/2026 (日)</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center">
+          <div class="text-xs font-bold text-slate-300 mb-1">⏰ 開放時間</div>
+          <div class="text-lg font-black text-white">11:00 - 17:00</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-md p-4 rounded-2xl border border-white/10 text-center">
+          <div class="text-xs font-bold text-slate-300 mb-1">🎤 升中講座</div>
+          <div class="text-lg font-black text-school-gold">14:30 - 15:30</div>
+        </div>
+      </div>
+
+      <!-- Poster and QR Code Visual Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 items-center">
+        <!-- Event Poster (Occupies 2 columns on medium screens) -->
+        <div class="md:col-span-2 rounded-2xl overflow-hidden bg-black/30 border border-white/10 shadow-lg">
+          <img src="infoday-poster.jpg" alt="小學學生資訊日海報" class="w-full h-auto object-cover">
+        </div>
+
+        <!-- Registration QR Code Card -->
+        <div class="bg-white text-slate-800 p-5 rounded-2xl text-center shadow-lg border border-slate-200">
+          <div class="text-sm font-black text-school-navy mb-1">掃瞄 QR Code 報名 / 了解更多</div>
+          <div class="text-xs text-slate-500 mb-3">Scan for Registration & Details</div>
+          <div class="w-40 h-40 mx-auto rounded-xl overflow-hidden border border-slate-200 p-1 bg-white">
+            <img src="infoday-qrcode.png" alt="資訊日報名 QR Code" class="w-full h-full object-contain">
+          </div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Scaler Logic Script -->
@@ -476,6 +520,9 @@
           .catch(err => console.log('ServiceWorker error:', err));
       });
     }
+  </script>
+</body>
+</html>
   </script>
 </body>
 </html>

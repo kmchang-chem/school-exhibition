@@ -75,8 +75,10 @@
 
     <!-- Main Header Banner (Scalable) -->
     <div class="scalable-content text-center">
-      <img id="school-badge-img" src="logo.jpeg" alt="School Logo" style="width: 100px; height: auto; display: block; margin: 0 auto 8px auto;" onerror="this.style.display='none'">
+      <img id="school-badge-img" src="logo.png" alt="School Logo" style="width: 100px; height: auto; display: block; margin: 0 auto 8px auto;" onerror="this.style.display='none'">
       
+      </div>
+
       <h1 class="text-xl sm:text-2xl font-black tracking-tight leading-snug mb-1 text-center">
         博愛醫院歷屆總理聯誼會梁省德中學
       </h1>
@@ -91,11 +93,16 @@
 
       <!-- Quick Navigation Pills -->
       <nav class="flex justify-center gap-2 overflow-x-auto hide-scrollbar px-2 pt-1 text-xs font-bold">
+        <a href="#holistic" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">全人發展</a>
         <a href="#transition" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">升中適應</a>
         <a href="#academic" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">學業成果</a>
+        <a href="#selflearn" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">自主學習</a>
         <a href="#english" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">英語與世界</a>
+        <a href="#reading" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">閱讀校園</a>
+        <a href="#uniform" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">制服團隊</a>
         <a href="#caring" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">關愛校園</a>
         <a href="#steam" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">STEAM與多元</a>
+        <a href="#future" class="bg-white/10 hover:bg-school-red px-3 py-1.5 rounded-lg whitespace-nowrap transition-colors">成就未來</a>
       </nav>
     </div>
   </header>
@@ -103,7 +110,36 @@
   <!-- Main Content Container (Scalable Body) -->
   <main class="scalable-content max-w-6xl mx-auto px-4 pt-6 space-y-10">
 
-    <!-- Domain 1: 升中適應・同行成長 -->
+    <!-- Point 2: Domain 1: 全人發展課程架構 -->
+    <section id="holistic" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold">🏛️</div>
+        <div>
+          <h2 class="text-xl font-black text-school-navy">全人發展課程架構</h2>
+          <p class="text-xs text-slate-500">學科知識 | 共通能力 | 品格與態度</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+        秉持「博愛行仁 ‧ 省善修德」校訓，構建全方位課程體系，整合學科知識、培養共通能力，並著重型塑優良品格與積極學習態度。
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="holistic1.jpg" alt="學科知識" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">學科知識奠基</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="holistic2.jpg" alt="共通能力" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">共通能力培育</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="holistic3.jpg" alt="品格與態度" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">品格與態度養成本</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Domain 2: 升中適應・同行成長 -->
     <section id="transition" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-2xl bg-red-100 text-school-red flex items-center justify-center text-xl font-bold">🌱</div>
@@ -116,7 +152,6 @@
         我們重視初中學生的適應與心理建構，透過高繩歷奇、露營體驗及中一學長同行計劃，協助新生迅速建立歸屬感，融入梁中大家庭。
       </p>
 
-      <!-- Photo Grid -->
       <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
           <img src="transition1.jpg" alt="高繩歷奇" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -137,7 +172,7 @@
       </div>
     </section>
 
-    <!-- Domain 2: 學業成果・升學出路 -->
+    <!-- Domain 3: 學業成果・升學出路 -->
     <section id="academic" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-2xl bg-blue-100 text-school-navy flex items-center justify-center text-xl font-bold">🎓</div>
@@ -147,7 +182,6 @@
         </div>
       </div>
 
-      <!-- Quick Stats Counter Banner -->
       <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
         <div class="bg-slate-50 p-3 rounded-2xl border border-slate-100 text-center">
           <div class="text-2xl font-black text-school-red">95.2%</div>
@@ -167,7 +201,6 @@
         </div>
       </div>
 
-      <!-- Photo Grid -->
       <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
         <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
           <img src="academic1.jpg" alt="香港大學獎學金" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
@@ -184,7 +217,36 @@
       </div>
     </section>
 
-    <!-- Domain 3: 英語學習 & 走出課室 -->
+    <!-- Point 3: Domain 4: 自主學習・照顧差異 -->
+    <section id="selflearn" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-2xl bg-sky-100 text-sky-700 flex items-center justify-center text-xl font-bold">💡</div>
+        <div>
+          <h2 class="text-xl font-black text-school-navy">自主學習 ‧ 照顧差異</h2>
+          <p class="text-xs text-slate-500">分層支援 | 拔尖補底 | BYOD互動學習</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+        貫徹因材施教原則，推行分層作業、晚修輔導及學生自攜裝置（BYOD）電子學習，全面關顧每位學生的不同學習進度與需要。
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="selflearn1.jpg" alt="分層支援/功課輔導/晚修計劃" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">分層支援 ‧ 晚修計劃</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="selflearn2.jpg" alt="學業跟進/拔尖補底" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">學業跟進 ‧ 拔尖補底</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="selflearn3.jpg" alt="自主溫習/BYOD/互動學習" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">自主溫習 ‧ BYOD互動</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Domain 5: 英語學習 & 走出課室 -->
     <section id="english" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-xl font-bold">✈️</div>
@@ -217,7 +279,69 @@
       </div>
     </section>
 
-    <!-- Domain 4: 關愛校園・實踐價值 -->
+    <!-- Point 4: Domain 6: 閱讀校園・拓展思維 -->
+    <section id="reading" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-2xl bg-teal-100 text-teal-700 flex items-center justify-center text-xl font-bold">📚</div>
+        <div>
+          <h2 class="text-xl font-black text-school-navy">閱讀校園 ‧ 拓展思維</h2>
+          <p class="text-xs text-slate-500">中英文晨讀 | 跨學科閱讀 | Battle of the Books</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+        打造濃郁閱讀氛圍，透過晨讀推廣、跨學科主題閱讀及國際閱讀競賽，拓寬視野並深化高階思維能力。
+      </p>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="reading1.jpg" alt="中英文晨讀/閱讀分享" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">中英文晨讀 ‧ 閱讀分享</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="reading2.jpg" alt="跨學科閱讀" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">跨學科主題閱讀</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="reading3.jpg" alt="Battle of the Books" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">Battle of the Books 競賽</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Point 5: Domain 7: 制服團隊・自律承擔 -->
+    <section id="uniform" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-2xl bg-indigo-100 text-indigo-700 flex items-center justify-center text-xl font-bold">🎖️</div>
+        <div>
+          <h2 class="text-xl font-black text-school-navy">制服團隊 ‧ 自律承擔</h2>
+          <p class="text-xs text-slate-500">童軍 | 紅十字會 | 少年警訊 | 聖約翰救傷隊</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+        校內設有四大制服團隊，透過嚴格步操、社區服務與團體協作訓練，培育學生強烈的紀律感、自律精神與社會承擔感。
+      </p>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="uniform1.jpg" alt="童軍" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">童軍團隊</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="uniform2.jpg" alt="紅十字會" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">青年紅十字會</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="uniform3.jpg" alt="少年警訊" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">少年警訊</span>
+        </div>
+        <div class="group relative rounded-xl overflow-hidden bg-slate-100 aspect-4/3 shadow-sm">
+          <img src="uniform4.jpg" alt="聖約翰救傷隊" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+          <span class="absolute bottom-2 left-2 bg-black/60 text-white text-[11px] px-2 py-0.5 rounded-md font-bold">聖約翰救傷隊</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Domain 8: 關愛校園・實踐價值 -->
     <section id="caring" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-2xl bg-emerald-100 text-emerald-700 flex items-center justify-center text-xl font-bold">🐾</div>
@@ -250,7 +374,7 @@
       </div>
     </section>
 
-    <!-- Domain 5: 多元學習・探索潛能 -->
+    <!-- Domain 10: 多元學習・探索潛能 -->
     <section id="steam" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
       <div class="flex items-center gap-3 mb-4">
         <div class="w-10 h-10 rounded-2xl bg-purple-100 text-purple-700 flex items-center justify-center text-xl font-bold">🤖</div>
@@ -280,6 +404,43 @@
       </div>
     </section>
 
+    <!-- Point 6: Domain 9: 立足梁中・成就未來 -->
+    <section id="future" class="bg-white rounded-3xl p-6 shadow-md border border-slate-200">
+      <div class="flex items-center gap-3 mb-4">
+        <div class="w-10 h-10 rounded-2xl bg-rose-100 text-rose-700 flex items-center justify-center text-xl font-bold">🌟</div>
+        <div>
+          <h2 class="text-xl font-black text-school-navy">立足梁中 ‧ 成就未來</h2>
+          <p class="text-xs text-slate-500">Learning Hierarchy in LSTC</p>
+        </div>
+      </div>
+      <p class="text-sm text-slate-600 mb-6 leading-relaxed">
+        梁省德中學學習梯階階梯（Hierarchy of Learning），導引學生從基礎探索邁向卓越成就：
+      </p>
+
+      <div class="mb-6 rounded-2xl overflow-hidden bg-slate-100 shadow-sm border border-slate-200 max-w-md mx-auto">
+        <img src="future1.png" alt="Hierarchy of Learning in LSTC" class="w-full h-auto object-cover">
+      </div>
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 text-center">
+        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200">
+          <div class="text-sm font-black text-school-navy">學會學習</div>
+          <div class="text-[11px] text-slate-500 font-bold">Learning to Learn</div>
+        </div>
+        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200">
+          <div class="text-sm font-black text-school-red">關愛他人</div>
+          <div class="text-[11px] text-slate-500 font-bold">Learning to Care</div>
+        </div>
+        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200">
+          <div class="text-sm font-black text-school-navy">體驗成長</div>
+          <div class="text-[11px] text-slate-500 font-bold">Learning in Action</div>
+        </div>
+        <div class="bg-slate-50 p-3 rounded-2xl border border-slate-200">
+          <div class="text-sm font-black text-school-red">啟迪潛能</div>
+          <div class="text-[11px] text-slate-500 font-bold">Learning to Inspire</div>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <!-- Scaler Logic Script -->
@@ -305,6 +466,7 @@
       applyScale();
     }
   </script>
+
   <!-- Register Offline Cache Engine -->
   <script>
     if ('serviceWorker' in navigator) {
@@ -315,7 +477,5 @@
       });
     }
   </script>
-</body>
-</html>
 </body>
 </html>
